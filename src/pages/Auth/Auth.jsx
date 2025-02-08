@@ -3,6 +3,7 @@ import Input from '@/components/Input/Input'
 import { saveApiData } from '@/utils/idb'
 import { useState } from 'react'
 import './Auth.scss'
+import logoSVG from '/logo.svg'
 
 const Auth = ({ setApiData }) => {
 	const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const Auth = ({ setApiData }) => {
 
 	return (
 		<div className="auth">
-			<img src="/logo.svg" alt="logo" width={128} height={128} />
+			<img src={logoSVG} alt="logo" width={128} height={128} />
 			<div className="auth__block">
 				<h1>Для работы в Green Api нужно заполнить форму!</h1>
 				<form className="auth-form" onSubmit={onSubmit}>
