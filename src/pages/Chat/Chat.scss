@@ -1,0 +1,149 @@
+.chat {
+	display: flex;
+	height: 100%;
+
+	&-list {
+		flex: 0 0 auto;
+		width: 30rem;
+		background-color: #111b21;
+
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+		}
+
+		&__new-chat {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			background-color: #2a3942;
+			padding: 1rem;
+		}
+
+		&__actions {
+			display: flex;
+			gap: 0.5rem;
+		}
+
+		&__contacts {
+			overflow: hidden auto;
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&-contact {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		background-color: transparent;
+		padding: 1rem;
+		transition: background-color 0.15s ease-in-out;
+
+		&:hover {
+			background-color: #202c33;
+		}
+		&.active {
+			background-color: #2a3942;
+		}
+
+		&__avatar {
+			flex: 0 0 auto;
+			width: 3rem;
+			height: 3rem;
+			background-color: #6a7175;
+			border-radius: 50%;
+			color: #cfd4d6;
+		}
+
+		&__content {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			text-align: left;
+		}
+
+		&__name {
+			font-size: 1.125rem;
+			color: #e9edef;
+		}
+
+		&__last-message {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size: 0.875rem;
+			color: #8696a0;
+		}
+
+		&__number {
+			font-size: 0.775rem;
+			color: #8696a0;
+		}
+	}
+
+	&-window {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		background-color: #0b141a;
+		border-left: 1px solid rgba(134, 150, 160, 0.15);
+
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #202c33;
+			border-bottom: 1px solid rgba(134, 150, 160, 0.15);
+			box-shadow: 0 1px 3px rgba(11, 20, 26, 0.4);
+			padding-right: 1rem;
+		}
+
+		&__messages {
+			overflow: hidden auto;
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			padding: 1rem;
+		}
+
+		&__form {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			background-color: #202c33;
+			padding: 0.5rem;
+		}
+		&__input {
+			flex: 1 1 auto;
+			background-color: #2a3942;
+			outline: none;
+			border: none;
+			border-radius: 0.5rem;
+			padding: 0.8rem;
+			color: #d1d7db;
+		}
+	}
+
+	&-message {
+		max-width: 75%;
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+		font-size: 0.875rem;
+		color: #e9edef;
+
+		&--own {
+			background-color: #005c4b;
+			align-self: flex-end;
+		}
+		&:not(&--own) {
+			background-color: #202c33;
+			align-self: flex-start;
+		}
+	}
+}
